@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <tabs>
+        <tab
+            id="@+id/tab_chat"
+            title="chat"
+            icon="@drawable/ic_chat_white_48dp"
+            barColorWhenSelected="#a3681b"/>
+
+        <tab
+            id="@+id/tab_friend"
+            title="friend"
+            icon="@drawable/ic_person_pin_white_48dp"
+            barColorWhenSelected="#915507"/>
+    </tabs>
+</PreferenceScreen>

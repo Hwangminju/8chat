@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="My Location" />
+        <item
+            android:id="@+id/nav_map2"
+            android:icon="@android:drawable/ic_menu_directions"
+            android:title="내 위치 주변" />
+        <item
+            android:id="@+id/nav_geocoding"
+            android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="주소 변환" />
+        <item
+            android:id="@+id/nav_delay"
+            android:icon="@android:drawable/sym_action_email"
+            android:title="예약 전송" />
+    </group>
+</menu>

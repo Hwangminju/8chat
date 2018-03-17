@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_chatnav">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/content_chat"
+        tools:context="com.example.mjhwa.chat.views.ChatnavActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/chat_rec_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/emoticonLayout"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <fragment
+                android:name="com.example.mjhwa.chat.views.EmoticonFragment"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:id="@+id/emoticonFragment"
+                android:orientation="horizontal"
+                ></fragment>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/photoSend"
+                android:src="@mipmap/camera_icon"
+                android:layout_gravity="center"
+                android:layout_width="48dp"
+                android:padding="8dp"
+                android:layout_height="48dp"/>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/emoticonSend"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:src="@mipmap/emoticon_send"/>
+
+            <EditText
+                android:id="@+id/edtContent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_weight="8"
+                android:background="#fff"
+                android:layout_width="0dp"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:hint="메시지"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/senderBtn"
+                android:src="@drawable/send_button"
+                android:layout_width="48dp"
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:enabled="false"
+                android:clickable="true"
+                android:layout_height="48dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
